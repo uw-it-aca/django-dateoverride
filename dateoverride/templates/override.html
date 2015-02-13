@@ -1,0 +1,22 @@
+{% extends wrapper_template %}
+{% block content %}
+
+<h2>Override current date</h2>
+<h3>Set the date</h3>
+<form action="{% url 'dateoverride.views.override' %}" method="POST">
+{% csrf_token %}
+
+Override date: <input type="text" name="date" value="{{ override_date }}" placeholder="YYYY-MM-DD HH:MM"/>
+{% if date_error %}
+<p>Error with date: {{ date_error }}</p>
+{% endif %}
+
+<input type="submit" value="Override Date" />
+
+<h3>Dates and terms</h3>
+<p>Actual:</p>
+{{ actual_now_date }}
+
+<p>Effective:</p>
+{{ override_date }}
+{% endblock %}

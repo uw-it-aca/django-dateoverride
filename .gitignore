@@ -52,3 +52,19 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Django
+/project/
+manage.py
+db.sqlite3
+
+# pip
+/bin/
+/include/
+/lib/
+/local/
+/src/
+
+# vim
+*.swp
+

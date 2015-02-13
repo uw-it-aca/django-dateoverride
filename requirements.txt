@@ -1,0 +1,7 @@
+Django
+AuthZ-Group==1.1.2
+Django-UserService==1.0.2
+python-dateutil
+django-compressor
+pytz
+-e git+https://github.com/uw-it-aca/django-supporttools.git#egg=SupportTools
